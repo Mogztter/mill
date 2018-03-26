@@ -330,7 +330,9 @@ rm -rf out/
 
 ### 0.1.7
 
-- Support for non-interactive (client/server) mode on Windows.
+- Experimental support for non-interactive (client/server) mode on Windows.
+
+- Windows batch (.bat) mill release.
 
 - More fixes for Java 9
 
