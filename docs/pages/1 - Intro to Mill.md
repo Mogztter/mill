@@ -33,13 +33,35 @@ Arch Linux has an [AUR package for mill](https://aur.archlinux.org/packages/mill
 pacaur -S mill
 ```
 
+### Windows
+
+To get started, download Mill from: https://github.com/lihaoyi/mill/releases/download/0.1.8/mill-0.1.8.bat
+
+Mill also works on a sh environment on Windows:
+
+* [MSYS2](https://www.msys2.org)
+
+  ```bash
+  mkdir -p /usr/local/bin && curl -Lo /usr/local/bin/mill https://github.com/lihaoyi/mill/releases/download/0.1.8/0.1.8
+  ```
+
+* [Cygwin](https://www.cygwin.com)
+
+  ```bash
+  mkdir -p /usr/local/bin && curl -Lo /usr/local/bin/mill https://github.com/lihaoyi/mill/releases/download/0.1.8/0.1.8 && chmod +x /usr/local/bin/mill && sed -i '0,/-cp "\$0"/{s/-cp "\$0"/-cp `cygpath -w "\$0"`/}; 0,/-cp "\$0"/{s/-cp "\$0"/-cp `cygpath -w "\$0"`/}' /usr/local/bin/mill
+  ```
+  
+* [Git-Bash](https://gitforwindows.org) and [WSL](https://docs.microsoft.com/en-us/windows/wsl)
+
+  Follow the instructions in the [manual](#manual) section below (for Git-Bash, run in administrator mode instead of sudo).  
+
 ### Manual
 
 To get started, download Mill and install it into your system via the following
 `curl`/`chmod` command:
 
 ```bash
-sudo curl -L -o /usr/local/bin/mill https://github.com/lihaoyi/mill/releases/download/0.1.7/0.1.7 && sudo chmod +x /usr/local/bin/mill
+sudo curl -Lo /usr/local/bin/mill https://github.com/lihaoyi/mill/releases/download/0.1.8/0.1.8 && sudo chmod +x /usr/local/bin/mill
 ```
 
 ### Development Releases
