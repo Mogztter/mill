@@ -332,21 +332,6 @@ rm -rf out/
 
 - Support for non-interactive (client/server) mode on Windows.
 
-  Mill requires an `sh` environment to run on Windows;
-  it is recommended to use [MSYS2](https://www.msys2.org) on Windows.
-  
-  [Cygwin](https://www.cygwin.com) can also be used, 
-  but your mileage may vary when running mill on non-interactive (client/server) mode
-  (it failed intermittently in mill's AppVeyor tests).
-  On Cygwin, run the following after downloading mill:
-  
-  ```bash
-  sed -i '0,/-cp "\$0"/{s/-cp "\$0"/-cp `cygpath -w "\$0"`/}; 0,/-cp "\$0"/{s/-cp "\$0"/-cp `cygpath -w "\$0"`/}' <mill-path>
-  ```
-  
-  Mill also runs on [Git-Bash](https://gitforwindows.org) and [WSL](https://docs.microsoft.com/windows/wsl)
-  but only on interactive mode.
-
 - More fixes for Java 9
 
 - Bumped the Mill daemon timeout from 1 minute to 5 minutes of inactivity before
